@@ -1,6 +1,6 @@
 <template>
-    <div>
-        
+    <div class="bg-black  text-violet-500 text-3xl">
+        hello 
     </div>
 </template>
 <script>

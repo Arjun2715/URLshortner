@@ -1,7 +1,10 @@
 <template>
   <!-- <img alt="Vue logo" src="./assets/logo.png"> 
   msg="Welcome to Your Vue.js App"-->
+  <div class="bg-slate-800">
   <UrlShortner />  
+
+  </div>
 </template>
 
 <script>
