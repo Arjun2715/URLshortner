@@ -1,30 +1,32 @@
-<template>
-  <!-- <img alt="Vue logo" src="./assets/logo.png"> 
-  msg="Welcome to Your Vue.js App"-->
-  <div class="bg-slate-800">
-  <UrlShortner />  
+<script setup>
+import NavBarVue from "./components/NavBar.vue";
+</script>
 
+<template>
+  <div>
+    <NavBarVue />
   </div>
 </template>
 
-<script>
-import UrlShortner from './components/UrlShortner.vue'
-
-export default {
-  name: 'App',
-  components: {
-    UrlShortner
-  }
+<style scoped>
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
-</script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
+
+    <!-- <a href="https://vitejs.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
+  <HelloWorld msg="Vite + Vue" /> -->
