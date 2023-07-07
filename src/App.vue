@@ -1,10 +1,15 @@
 <script setup>
 import NavBarVue from "./components/NavBar.vue";
+import card from "./components/card.vue";
 </script>
 
 <template>
   <div>
     <NavBarVue />
+    <div class="flex justify-center ">
+      <card />
+
+    </div>
   </div>
 </template>
 
