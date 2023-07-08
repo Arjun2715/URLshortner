@@ -1,6 +1,6 @@
 <template>
-  <div class="card w-96 glass">
-  <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
+  <div class="card w-[50em] h-[22em] glass overflow-y-hidden">
+  <!-- <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure> -->
   <div class="card-body">
     <h2 class="card-title">Life hack</h2>
     <p>How to park your car at your garage?</p>
