@@ -4,7 +4,7 @@
     <div class="card-body">
       <h1>Easily shortened URLs!</h1>
       <h2>Just paste the URL, submit and it's done!</h2>
-      <form @submit.prevent="shorten" class="" >
+      <form @submit.prevent="shorten" class="">
         <div class="input-container">
           <!-- <label for="name" class="name">Name:</label> -->
           <input
@@ -15,15 +15,10 @@
           />
           <div class="underline"></div>
         </div>
-        <div class="flex justify-center ">
-                    <button class="btn w-32 ">Shorten it!</button>
-
+        <div class="flex justify-center">
+          <button class="btn w-32">Shorten it!</button>
         </div>
       </form>
-      <!-- <p>How to park your car at your garage?</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Learn now!</button>
-    </div> -->
     </div>
   </div>
 </template>
