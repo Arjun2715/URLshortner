@@ -7,7 +7,7 @@ import FooterVue from "./components/Footer.vue";
 </script>
 
 <template>
-  <div class="">
+  <div class="overflow-y-hidden">
     <NavBarVue />
     <div class="flex justify-center  my-40">
       <card />
