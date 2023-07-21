@@ -25,7 +25,14 @@
 
 <script>
 export default {
-  
+
+  methods: {
+
+  },
+  data: {
+    
+  },
+
 };
 </script>
 
