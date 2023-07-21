@@ -1,11 +1,11 @@
 <template>
-  <div class="card w-[50em] h-[22.5em] glass">
+  <div class="card w-[50em] h-[22.5em] glass m-6">
     <!-- <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure> -->
     <div class="card-body">
       <h1>Easily shortened URLs!</h1>
       <h2>Just paste the URL, submit and it's done!</h2>
-      <form @submit.prevent="shorten" class="">
-        <div class="input-container">
+      <form @submit.prevent="shorten" class="p-0">
+        <div class="input-container my-4">
           <!-- <label for="name" class="name">Name:</label> -->
           <input
             placeholder="Enter Link here"
@@ -24,13 +24,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  
+};
 </script>
 
 <style>
 .input-container {
   position: relative;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 label {
@@ -44,7 +46,6 @@ label {
   font-size: 16px;
   border: none;
   border-radius: 4px;
-  color: #333;
   width: 100%;
   outline: none;
 }
@@ -54,7 +55,7 @@ label {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 4px;
   background-color: #4158d0;
   background-image: linear-gradient(
     43deg,
@@ -62,7 +63,7 @@ label {
     #c850c0 46%,
     #ffcc70 100%
   );
-  transition: width 0.3s;
+  transition: width 0.5s;
 }
 
 .input[type="text"]:focus + .underline {
