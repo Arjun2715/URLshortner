@@ -38,7 +38,7 @@ export default {
       axios.defaults.headers.common["Authorization"] =
         "Bearer " + this.$store.state.token;
       axios
-        .get(this.$store.state.baseUrl + "/api/user/allclients")
+        .get()
         .then((response) => {
           if (response.data.rc == 1) {
             this.link = response.data.data;
