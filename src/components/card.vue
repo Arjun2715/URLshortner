@@ -4,19 +4,16 @@
     <div class="card-body">
       <h1>Easily shortened URLs!</h1>
       <h2>Just paste the URL, submit and it's done!</h2>
-      <form @submit.prevent="shorten" class="p-0">
+      <form class="p-0">
+        <!-- @submit.prevent="shorten" -->
         <div class="input-container my-4">
-          <!-- <label for="name" class="name">Name:</label> -->
-          <input
-            placeholder="Enter Link here"
-            type="text"
-            class="input"
-            v-model="url"
-          />
+          <input placeholder="Enter Link here" type="text" class="input"  v-model="link"/>
+          <!-- v-model="this.data.url" -->
+
           <div class="underline"></div>
         </div>
         <div class="flex justify-center">
-          <button class="btn w-32">Shorten it!</button>
+          <a class="btn w-32" @click="getlink">Shorten it!</a>
         </div>
       </form>
     </div>
@@ -24,15 +21,38 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-
+  data() {
+    return {
+      link: "",
+    };
+  },
   methods: {
-
+    getlink(){
+        
+      console.log(this.link);
+    },
+    shortenlink() {
+      axios.defaults.headers.common["Authorization"] =
+        "Bearer " + this.$store.state.token;
+      axios
+        .get(this.$store.state.baseUrl + "/api/user/allclients")
+        .then((response) => {
+          if (response.data.rc == 1) {
+            this.link = response.data.data;
+          }
+        })
+        .catch(() => {
+          console.error("ERROR");
+          self.$router.push({ name: "Sign In" });
+        })
+        .finally(() => {
+          this.loading = false;
+        });
+    },
   },
-  data: {
-    
-  },
-
 };
 </script>
 
