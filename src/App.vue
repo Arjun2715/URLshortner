@@ -1,7 +1,7 @@
 <script setup>
 import NavBarVue from "./components/NavBar.vue";
-import Card from "./components/Card.vue";
 import FooterVue from "./components/Footer.vue";
+import Card from "./components/Card.vue";
 // import info from "./components/info.vue";
 
 // export default {

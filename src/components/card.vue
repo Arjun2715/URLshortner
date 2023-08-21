@@ -30,8 +30,7 @@ export default {
     };
   },
   methods: {
-    getlink(){
-        
+    getlink(){        
       console.log(this.link);
     },
     shortenlink() {
