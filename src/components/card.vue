@@ -13,7 +13,8 @@
           <div class="underline"></div>
         </div>
         <div class="flex justify-center">
-          <a class="btn w-32" @click="getlink">Shorten it!</a>
+          <a class="btn w-32" @click="shortenUrl">Shorten it!</a> 
+           <!-- @click="getlink" -->
         </div>
       </form>
     </div>
@@ -34,23 +35,47 @@ export default {
       console.log(this.link);
     },
     shortenlink() {
-      axios.defaults.headers.common["Authorization"] =
-        "Bearer " + this.$store.state.token;
-      axios
-        .get()
-        .then((response) => {
-          if (response.data.rc == 1) {
-            this.link = response.data.data;
-          }
-        })
-        .catch(() => {
-          console.error("ERROR");
-          self.$router.push({ name: "Sign In" });
-        })
-        .finally(() => {
-          this.loading = false;
-        });
+      // axios.defaults.headers.common["Authorization"] =
+      //   "Bearer " + this.$store.state.token;
+      // axios
+      //   .get()
+      //   .then((response) => {
+      //     if (response.data.rc == 1) {
+      //       this.link = response.data.data;
+      //     }
+      //   })
+      //   .catch(() => {
+      //     console.error("ERROR");
+      //     self.$router.push({ name: "Sign In" });
+      //   })
+      //   .finally(() => {
+      //     this.loading = false;
+      //   });
+
+
     },
+    async shortenUrl() {
+      const url = 'https://api-ssl.bitly.com/v4/shorten';
+      const token = '5d33df441dc6e635a129e664de258333d0b26786'; // Replace with your actual token
+
+      const headers = {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json'
+      };
+
+      const data = {
+        long_url: 'https://dev.bitly.com',
+        domain: 'bit.ly',
+        group_guid: 'o_125p27nihh'
+      };
+
+      try {
+        const response = await axios.post(url, data, { headers });
+        console.log('Shortened URL:', response.data.id);
+      } catch (error) {
+        console.error('Error shortening URL:', error);
+      }
+    }
   },
 };
 </script>

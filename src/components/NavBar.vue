@@ -22,13 +22,9 @@
           tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a href="#" on-submit="">Github</a></li>
+          <li><a :href="githubLink" target="_blank">Github</a></li>
           <li>
-            <a href="#">LinkedIn</a>
-            <!-- <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul> -->
+            <a :href="linkedinLink" target="_blank">LinkedIn</a>
           </li>
           <!-- <li><a>Item 3</a></li> -->
         </ul>
@@ -37,28 +33,27 @@
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Github</a></li>
-        <li><a>LinkedIn</a></li>
-        <!-- <li tabindex="0">
-          <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a>Item 3</a></li> -->
+        <li><a :href="githubLink" target="_blank">Github</a></li>
+        <li><a :href="linkedinLink" target="_blank">LinkedIn</a></li>
+      
+        <!-- <li><a>Item 3</a></li>  -->
       </ul>
     </div>
     <div class="navbar-end">
-      <!-- <a class="btn">Button</a> -->
+      <a class="btn">Button</a>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      githubLink: "https://github.com/Arjun2715",
+      linkedinLink: "https://www.linkedin.com/in/arjunjot-singh",
+    };
+  },
+};
 </script>
 
 <style>
