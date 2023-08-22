@@ -26,7 +26,6 @@
           <li>
             <a :href="linkedinLink" target="_blank">LinkedIn</a>
           </li>
-          <!-- <li><a>Item 3</a></li> -->
         </ul>
       </div>
       <a class="btn btn-ghost normal-case text-xl">Url Shortner</a>
@@ -35,8 +34,6 @@
       <ul class="menu menu-horizontal px-1">
         <li><a :href="githubLink" target="_blank">Github</a></li>
         <li><a :href="linkedinLink" target="_blank">LinkedIn</a></li>
-      
-        <!-- <li><a>Item 3</a></li>  -->
       </ul>
     </div>
     <div class="navbar-end">
