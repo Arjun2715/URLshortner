@@ -56,7 +56,7 @@ export default {
     },
     async shortenUrl() {
       const url = 'https://api-ssl.bitly.com/v4/shorten';
-      const token = '5d33df441dc6e635a129e664de258333d0b26786'; // Replace with your actual token
+      const token = '5d33df441dc6e635a129e664de258333d0b26786'; 
 
       const headers = {
         'Authorization': `Bearer ${token}`,
